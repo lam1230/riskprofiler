@@ -33,6 +33,7 @@ app.post('/survey', function(req,res){
 	res.render('surveyresult.ejs', {products: products, surveyresults: surveyresults})
 });
 
-app.listen(80, function () {
-  console.log('survey app listening on port 80!')
+const port = process.env.port || 3000
+app.listen(port, function () {
+  console.log('survey app listening on port 3000!')
 })

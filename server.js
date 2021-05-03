@@ -28,6 +28,7 @@ app.use(session({
 
 app.use('/', surveyRouter);
 
-app.listen(80, function() {
-    console.log('survey app is listening on port 80!');
+const port = process.env.port || 3000
+app.listen(port, function() {
+    console.log('survey app is listening on port 3000!');
 });
