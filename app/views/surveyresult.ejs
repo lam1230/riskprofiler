@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/surveystyle.css" media="screen" />
+    </head>
+    <body>
+        <h2> Thank you for participating in the Mobile Purchasing Survey!</h2>
+        <h2> You voted for: <%= products[vote]%></h2>
+        <div id='result'>
+        <h4> Current Survey Results: </h4>
+
+        <h5> For Female Respondents</h5>
+        <% for (var i = 0; i<surveyresults['fp'].length; i++){%>
+        <span><%= products[i]%>: <%= surveyresults['fp'][i]%></span><br />
+        <% } %>
+
+        <h5> For Male Respondents</h5>
+        <% for (var i = 0; i<surveyresults['mp'].length; i++){%>
+        <span><%= products[i]%>: <%= surveyresults['mp'][i]%></span><br />
+        <% } %>
+
+        </div>
+        <div id='result'>
+            <p>show result</p>
+        </div>
+    </body>
+</html>
